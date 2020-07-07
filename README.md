@@ -29,6 +29,6 @@ The application is secured using Spring Security and Thymeleaf is used as the te
    Your site is now running at `http://localhost:8080`!
  
 
-## :heart: Thanks
+**Made with** :heart:
 
 
