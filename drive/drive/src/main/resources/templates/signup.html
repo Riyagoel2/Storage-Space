@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Registration Form</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" type="text/css" th:href="@{/css/registration.css}"/>
+</head>
+<body>
+<div class="container">
+    <div class="nav">
+        
+           <a href="/login" class="logina">Already a User ?</a>
+           <a href="/" class="homea"> Back to Home</a> 
+       
+    </div>
+    <div class="row">
+        <h1>SignUp Form</h1>
+            <form class="form-sign-up" th:action="@{/sign-up}"
+                  th:object="${user}" method="post" 
+                  role="form">
+                
+
+               <div class="form-group">
+                   
+                        <input type="text" th:field="*{username}" placeholder="User Name"
+                               class="form-control"/> 
+                               <div>
+                               <label
+                            th:if="${#fields.hasErrors('username')}" th:errors="*{username}"
+                            class="validation-message"></label>
+                            <div class="validation-message" th:if="${userExists}">*Username Exists.Please choose another</div>
+                             </div>
+                   
+                </div>
+                
+                <div class="form-group">
+                   
+                        <input type="text" th:field="*{email}" placeholder="Email"
+                               class="form-control"/> 
+                                 <div>
+                               <label
+                            th:if="${#fields.hasErrors('email')}" th:errors="*{email}"
+                            class="validation-message"></label>
+                             </div>
+                    
+                </div>
+                
+                <div class="form-group">
+                   
+                        <input type="password" th:field="*{password}"
+                               placeholder="Password" class="form-control"/>
+                                 <div>
+                                <label
+                            th:if="${#fields.hasErrors('password')}" th:errors="*{password}"
+                            class="validation-message"></label>
+                            </div>
+                    </div>
+              
+
+                <div class="form-group">
+               
+                        <input type="submit" value="SignUp" class="btn "></input>
+                    </div>
+<br>
+                <h2><span class="text-success" th:utext="${successMessage}"></span></h2>
+
+            </form>
+        </div>
+    </div>
+</body>
+</html>

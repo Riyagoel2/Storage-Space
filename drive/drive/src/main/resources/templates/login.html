@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+
+<link rel="stylesheet" type="text/css"  href = "/css/login.css" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<div class="row">
+    <div class="nav">
+      
+           <a href="/sign-up" class="logina">SignUp</a>
+           <a href="/" class="homea"> Back to Home</a> 
+       
+
+    </div>
+<div class="container">
+    <h1 th:text="Welcome"></h1>
+    <form th:action="@{/login}" method="POST" class="form-signin">
+       
+        <input type="text" id="user_name" name="user_name" placeholder="User Name"
+               class="form-control"/> <br/>
+             
+        <input type="password" th:placeholder="Password"
+               id="password" name="password" class="form-control"/> <br/>
+
+        <div th:if="${param.error}">
+            <p>User Name or Password invalid, please verify</p>
+           
+        </div>
+        <input type="Submit" value="Login"  class="login-btn"></input>
+    </form>
+</div>
+</div>
+</body>
+</html>

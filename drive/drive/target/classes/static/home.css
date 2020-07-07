@@ -1,0 +1,389 @@
+
+*
+{
+    box-sizing: border-box;
+     margin: 0;
+}
+
+
+body{
+    background-color: #5bc0be;
+    width:100%;
+    height:100%;
+    font-size: 16px;
+    font-family: 'Oxygen', sans-serif;
+ }
+ header {
+  height: 70px;
+  width: 100%;
+  padding-top: 18px;
+  position: fixed;
+  top: 0;
+  overflow: hidden;
+  background-color: whitesmoke;
+  border-radius: 2px;
+  border-bottom: 0.5px solid black;
+}
+ 
+ 
+  .container2 ul {
+  list-style-type: none;
+   
+  
+}
+   
+header #imgid {
+  height: 60px;
+  width: 70px;
+  float: left;
+  margin-top: -30px;
+  
+   margin-left: 25px;
+}
+.nav-right a{
+    float: right;   
+   display: block;
+   margin-right:35px;    
+   text-decoration: none;
+   font-size: 18px;
+   font-weight: bold;
+   padding: 4px;
+    }
+.nav-right a:hover{
+   font-size: 125%;
+   font-weight: bolder;
+}
+
+#uploadfile{
+    
+margin-top:-15px;
+margin-left:15px;
+    color:black;
+
+}
+#logout
+{
+    color:black;
+margin-top:-15px;
+}
+i
+{
+ margin-right:3px;
+ font-size:16px;
+}
+
+ 
+.main-part
+{   margin-top:70px;
+    width:100%;
+    height:600px;
+}
+ 
+ 
+.main-heading
+{
+  text-align:center;
+  color:white;
+  font-size:50px;
+  padding:10px;
+}
+
+h2
+{
+   text-align:center;
+  color:white;
+  font-size:30px;
+  margin-top:5px;
+  padding:5px;
+}
+.row {
+margin-top:80px;
+  display: flex;
+}
+
+.column {
+  flex:100%;
+  padding: 10px;
+   
+}
+
+ .copylink{
+ display:none;
+  
+ }
+
+#area
+{
+ width:40px;
+
+}
+h3  {
+color: red;
+ }
+
+#mydownloadForm
+{
+   text-align:center;
+  
+}
+.btn1 , .btn2
+{
+ margin-bottom:40px;
+ margin-left:45%;
+ width: 150px;
+    height: 50px;
+    font-size: larger;
+    
+    color:#5B2C6F;
+  
+ }
+ 
+ 
+ 
+button {
+    
+    border: 1px solid transparent;
+    font-size: 14px;
+    outline: none;
+    line-height: 100%;
+    white-space: nowrap;
+    vertical-align: middle;
+    padding: 0.6rem 1rem;
+    border-radius: 2px;
+    cursor: pointer;
+    min-height: 38px;
+ }
+
+.btn2
+ { cursor:default;
+    width: 170px;
+  }
+ .btn
+ {
+   margin-right:20px;
+   margin-top:10px;
+   
+ }
+ button:hover {
+    background-color: white;
+}
+ #modalform {
+ float:left;
+ width:70%;
+ padding:5px;
+ background-color:#ECF0F1;
+ border:1px solid #ECF0F1;
+  border-radius: 4px;
+ }
+ .submit
+ {  margin-left : 25%;
+ }
+
+ #copylink{
+ 
+ margin-top:-1px;
+ background-color:#ECF0F1;
+ 
+ }
+ #copylink:hover
+ {
+ background-color::#ECF0F1;
+ cursor:default;
+ }
+ #downhr
+ {
+    
+    color: grey;
+    width: 100%;
+    margin-top: 10px;
+ }
+ 
+ .radio-inline
+ 
+ {
+ padding: 10px;
+    margin-right: 10px;
+ }
+ #filess a 
+ 
+ { text-decoration:none;
+ 
+ }
+  #filess a div
+ { 
+ 
+  margin-top:15px;
+   margin-bottom:25px;
+  color:white;
+  font-weight:bold;
+  font-size:18px;
+ 
+ }
+ 
+ #filess a div:hover
+ {
+   color:purple;
+   }
+ 
+.tooltip {
+  background-color:#000;
+    border:1px solid #fff;
+    padding:10px 15px;
+    width:200px;
+    display:none;
+    color:#fff;
+    text-align:left;
+    font-size:14px;
+ }
+ #share
+ {
+  height:30px;    
+ margin-left:0px;
+  
+ }
+ #share2
+ {
+ 
+ margin-left:90px;
+ }
+ #exampleModal
+ {
+ opacity: 0.9;
+    background-color: rgb(133, 146, 158);}
+    
+    .modal-content{
+    padding: 20px;
+   
+    width: 100%;
+    height: 100%;
+    }
+    
+  .modal-dialog{   
+     position: absolute;
+    top: 20%;
+    left: 30%;
+    width: 100%;
+    }
+    
+    
+    #done
+    {
+     background-color: #5bc0be;
+     width:85px;
+     border:none;
+    }
+    
+      
+    #done:hover
+    {
+     background-color:#A3E4D7;
+   
+    }
+    
+    @media(min-width:300px) and (max-width:500px)
+    {
+    .nav-right a{
+    float: right;   
+   display: block;
+   margin-right:20px;    
+   text-decoration: none;
+   font-size: 16px;
+   font-weight: bold;
+   padding: 4px;
+    }
+       
+    header #imgid
+{
+height:50px;
+width:60px;
+float: left;
+margin-top: -25px;
+margin-left: 30px;
+ 
+}
+ i
+{
+ margin-right:3px;
+ font-size:14px;
+}
+ .main-heading
+{
+  text-align:center;
+  color:white;
+  font-size:35px;
+  padding:10px;
+    margin-top:5px;
+  
+}
+ h2
+{
+   text-align:center;
+  color:white;
+  font-size:20px;
+  margin-top:5px;
+  padding:5px;
+}
+    
+    .btn2
+ { cursor:default;
+    width: 170px;
+    margin-left:33%;
+    margin-top:-20px;
+  }
+  
+  
+   #share2
+ {
+ 
+ margin-left:30px;
+ width:65px;
+ }
+ 
+ 
+ .radio-inline
+ 
+ {
+ padding: 5px;
+    margin-right: 3px;
+ }
+ #share
+ {
+  height:30px;    
+ margin-left:0px;
+  width:65px;
+ }
+ 
+ 
+ #exampleModal
+ {
+ opacity: 0.9;
+    background-color: rgb(133, 146, 158);}
+    
+    .modal-content{
+    padding: 5x;
+   
+    width: 93%;
+    height: 15%;
+    }
+    
+  .modal-dialog{   
+     position: absolute;
+    top: 20%;
+    left: 3%;
+    width: 100%;
+    }
+    
+    
+    #done
+    {
+     background-color: #5bc0be;
+     width:65px;
+     border:none;
+    }
+    
+ 
+ 
+ 
+    }
+    
+    

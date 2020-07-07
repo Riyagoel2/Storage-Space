@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link rel="stylesheet" type="text/css" href="/home.css" />
+</head>
+
+<body>
+    <header>
+        <div class="container2">
+            <div class="brand-name">
+                <a href="/"> <img id="imgid" src="/media/0aee0976-aa9d-4233-9308-7fca36e8d8c3_200x200.png"></a>
+            </div>
+            <ul class="nav-right">
+
+                <a id="logout" th:href="@{/logout}"><i class="fa fa-power-off"></i>Logout</a>
+                <a id="uploadfile" th:href="@{/upload-file}">Upload File</a>
+
+            </ul>
+        </div>
+    </header>
+
+    <div class="main-part">
+        <h1 class="main-heading">Heya back ! </h1>
+        <h2 th:text="${username}"></h2>
+        <div class="upload-content">
+            <div class="row">
+
+                <div class="column col2">
+                    <button type="submit" class="btn2" disabled><i class="fa fa-download"></i>Download File</button>
+                    <div class="form-popup" id="mydownloadForm">
+                        <hr id="downhr">
+                        <div th:if="${userfile.size()==0}">No files available</div>
+                            <div th:unless="${userfile.size()==0}">
+                                < div id="filess" th:each="ufile : ${userfile}">
+                                    <a th:href="@{'file/'+ ${ufile.fileId}+'/0R3SAYCCGRRW' }">
+                                        <div th:text="${ufile.filename}"> </div>
+                                    </a>
+                                    <form id="myform" method="post" th:action="@{/home}">
+                                        <input type="hidden" id="fileid" name="fileid" th:value="${ufile.fileId}"
+                                            required>
+                                        <label class="radio-inline radio-inline1">
+                                            <input title="file cannot be seen by anyone else" type="radio"
+                                                name="radioName" id="private" value="private"
+                                                th:checked="!${ufile.shared}" /> Private</label>
+                                        <label class="radio-inline radio-inline2">
+                                            <input title="file can be seen by anyone having link" type="radio"
+                                                name="radioName" id="public" value="public"
+                                                th:checked="${ufile.shared}" /> Public</label>
+                                        <button id="share">Set Privacy</button>
+                                        <button title="copy link" id="share2" type="button" data-toggle="modal"
+                                            data-target="#exampleModal"
+                                            th:attrappend="data-target=${ufile.fileId}">Share</button>
+                                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                                            th:attrappend="id=${ufile.fileId}" aria-labelledby="exampleModalLabel"
+                                            aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="exampleModalLabel"> Copy link </h5>
+                                                        <button type="button" class="close" data-dismiss="modal"
+                                                            aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <form>
+                                                            <input id="modalform" type="text"
+                                                                th:value="'http://localhost:8080/file/'+${ufile.fileId}+'/0R3SAYCCGRRW'"
+                                                                disabled></input>
+
+                                                        </form>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-primary" id="done"
+                                                            data-dismiss="modal">Done
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <hr id="downhr">
+                                    </form>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <!-- JS, Popper.js, and jQuery -->
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="/js/main2.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,128 @@
+*{
+    box-sizing: border-box;
+   margin-left: 0;
+   margin-right: 0;
+   margin-top: 0;
+}
+ body
+ {
+ 
+    background-color: #5bc0be;
+    overflow:hidden; }
+ 
+.row
+{  
+     width: 50%;
+     height: 700px;
+     margin-left: auto;
+     margin-right: auto;
+   
+     margin-top: 100px;
+    
+     
+}
+.nav
+ {
+      background-color: whitesmoke;
+      height: 70px;
+     width: 100%;
+     padding:20px;
+     border-bottom: 0.5px solid black;   
+    
+ }
+
+  button{
+    text-align: center;
+    display: inline-block;
+    border: none;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+
+  }
+   
+      
+.validation-message {
+    font-style: normal;
+    font-size: 15px;
+    color: white;
+    margin-top:4px;
+     margin-bottom:4px;
+}
+
+h1{
+   font-family: 'Oxygen', sans-serif;
+     font-weight: bold;
+    text-align: center;
+    font-size:42px;
+   margin-bottom: 50px;
+   margin-left:0%;
+  
+}
+
+.form-group
+{
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 12px;
+
+}
+.form-sign-up {
+    margin-left: 28%;
+     padding: 30px 38px 66px;
+    
+     
+ }
+ .form-control {
+    position: relative;
+    font-size: 16px;
+    height: auto;
+    padding: 10px;
+}
+.btn
+{
+    background-color: white;
+    width: 30%;
+    height:30px;
+    font-size: 18px;
+    margin-left: 42px;
+    margin-top: 8px;
+
+}
+
+.logina:hover , .homea:hover
+{
+        font-size: 130%;
+        font-weight: bolder;
+    color: black;
+
+}
+.logina
+{     
+      color: black;
+      font-size: 20px;
+      height: 100%;
+      width:100%;
+   
+      text-decoration:none;
+      margin-right:30px;
+        margin-left:30px;
+     
+}
+
+.homea
+{
+     
+      color: black;
+      font-size: 20px;
+      height: 100%;
+      width:100%;
+     text-align: left;
+     text-decoration:none;
+      margin-right:30px;
+       margin-left:30px;
+        
+  }
+  
+  
+ 

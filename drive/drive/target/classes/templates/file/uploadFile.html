@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+    
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" >
+        <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+        <link rel="stylesheet" type="text/css" href="css/uploadfi.css"/>
+    </head>
+    
+    <body>
+    <header>
+        <div class="container2">
+             <div class="brand-name">
+             <img id="imgid" src ="/media/0aee0976-aa9d-4233-9308-7fca36e8d8c3_200x200.png" >
+             </div>
+             <ul class="nav-right">
+             
+             <a id="logout" th:href ="@{/logout}"><i class="fa fa-power-off"></i>Logout</a> 
+             <a id="uploadfile" th:href ="@{/home}">My files</a> 
+              
+             </ul>
+        </div>     
+    </header>
+   
+    <div class="main-part">
+     <div class="column col1">
+         <h2>Upload File</h2>
+          <div class="form-popup" id="myForm">
+                <form id="singleUploadForm" name="singleUploadForm">
+                  <input id="singleFileUploadInput" type="file" name="file" class="file-input"   />
+                  <input type="hidden" id="userid" name="userid" th:value="${user.id}"> 
+                
+                  <div>
+                  <button id="submit" type="submit" class="btn btn-md btn-primary submit"> Submit</button>
+                  </div>
+                  
+                     <div class="upload-response">
+                    
+               <div id="singleFileUploadError"></div>
+               
+                <div id="singleFileUploadSuccess"></div>
+                     
+                    </div>
+                  </form>
+          </div> 
+          
+                     
+          </div>
+
+
+    </div>
+    
+  <script src = "/js/main.js" > </script>    </body>
+    </html>
