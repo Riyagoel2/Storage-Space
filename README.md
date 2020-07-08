@@ -2,9 +2,7 @@
 A Spring Boot Application that enables the users to securely save their files online and enable them to share their files.
 The application is secured using Spring Security and Thymeleaf is used as the template engine.
 
-## 🚀 Quick start
-
-### **Here is our quickstart guide 
+## Quick start
 
 1. **Install Maven and add it to the path variable**
 
@@ -24,11 +22,8 @@ The application is secured using Spring Security and Thymeleaf is used as the te
     (eg:  java -jar target/mywebserviceapp-0.0.1-SNAPSHOT.jar)
    ```
 
-6. **Open the source code and start editing!**
+6. **Site is now running at localhost:8080**
 
-   Your site is now running at `http://localhost:8080`!
-
-
-     **Made with** :heart:
+   
 
 
